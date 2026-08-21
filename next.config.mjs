@@ -1,4 +1,4 @@
-mport { imageHosts } from './image-hosts.config.mjs';
+import { imageHosts } from './image-hosts.config.mjs';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
