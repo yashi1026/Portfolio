@@ -469,7 +469,7 @@ export default function HeroSection() {
             {/* LINKEDIN */}
 
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/yashi-singh-aba6a4291/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -505,7 +505,7 @@ export default function HeroSection() {
             {/* EMAIL */}
 
             <a
-              href="mailto:yashisingh@email.com"
+              href="mailto:yashisinghjadaun123@gmail.com"
               aria-label="Email"
               className="
                 rounded-lg
