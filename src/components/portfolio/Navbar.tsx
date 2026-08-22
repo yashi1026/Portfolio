@@ -83,7 +83,7 @@ export default function Navbar() {
                 </button>
               ))}
               <a
-                href="/resume.pdf"
+                href="/Yashi_Resume.pdf"
                 download
                 className="ml-4 flex items-center space-x-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-indigo-500/30 hover:scale-105 transition-all duration-300"
               >
