@@ -56,8 +56,6 @@ export default function EducationSection() {
             Education
           </h2>
 
-          <div className="section-divider" />
-
           <p className="section-subtitle text-gray-600">
             My academic journey and qualifications
           </p>
