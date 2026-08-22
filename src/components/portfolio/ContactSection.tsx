@@ -49,6 +49,7 @@ export default function ContactSection() {
       bg: 'bg-indigo-500/20',
       hoverBg: 'hover:bg-indigo-500/30',
     },
+
     {
       icon: (
         <svg
@@ -74,6 +75,7 @@ export default function ContactSection() {
       bg: 'bg-blue-500/20',
       hoverBg: 'hover:bg-blue-500/30',
     },
+
     {
       icon: (
         <svg
@@ -92,12 +94,13 @@ export default function ContactSection() {
         </svg>
       ),
       label: 'GitHub',
-      value: 'github.com/yashisingh',
-      href: 'https://github.com',
+      value: 'github.com/yashi1026',
+      href: 'https://github.com/yashi1026',
       color: '#9333ea',
       bg: 'bg-purple-500/20',
       hoverBg: 'hover:bg-purple-500/30',
     },
+
     {
       icon: (
         <svg
@@ -149,6 +152,7 @@ export default function ContactSection() {
 
           {/* Left: Contact info */}
           <div className="space-y-8">
+
             <div>
               <h3 className="text-2xl font-bold mb-6">
                 Get In Touch
@@ -207,6 +211,7 @@ export default function ContactSection() {
                 out!
               </p>
             </div>
+
           </div>
 
           {/* Right: Contact form */}
@@ -243,6 +248,7 @@ export default function ContactSection() {
                 <p className="text-gray-400 text-sm text-center">
                   Thank you for reaching out. I&apos;ll get back to you soon.
                 </p>
+
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -343,6 +349,7 @@ export default function ContactSection() {
 
               </form>
             )}
+
           </div>
         </div>
       </div>
