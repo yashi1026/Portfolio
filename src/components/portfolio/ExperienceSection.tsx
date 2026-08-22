@@ -4,17 +4,15 @@ export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="py-24 bg-gradient-to-br from-slate-900 via-indigo-900/30 to-slate-900 relative"
+      className="pt-16 pb-24 bg-gradient-to-br from-slate-900 via-indigo-900/30 to-slate-900 relative"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* SECTION HEADER */}
-        <div className="section-header">
+        <div className="section-header mb-6">
           <h2 className="section-title text-white">
             Experience & Training
           </h2>
-
-          <div className="section-divider" />
 
           <p className="section-subtitle text-gray-400">
             Professional training and certifications
@@ -22,11 +20,9 @@ export default function ExperienceSection() {
         </div>
 
         {/* TRAINING & CERTIFICATION */}
-        <div className="grid lg:grid-cols-2 gap-8 mt-12">
+        <div className="grid lg:grid-cols-2 gap-8 mt-8">
 
-          {/* =========================
-              TRAINING
-          ========================== */}
+          {/* TRAINING */}
           <div>
             <h3 className="text-lg font-semibold text-indigo-400 mb-6 flex items-center space-x-2">
               <svg
@@ -107,9 +103,7 @@ export default function ExperienceSection() {
             </div>
           </div>
 
-          {/* =========================
-              CERTIFICATION
-          ========================== */}
+          {/* CERTIFICATION */}
           <div>
             <h3 className="text-lg font-semibold text-purple-400 mb-6 flex items-center space-x-2">
               <svg
