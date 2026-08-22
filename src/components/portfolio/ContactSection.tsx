@@ -89,7 +89,7 @@ export default function ContactSection() {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+          <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
           <path d="M9 18c-4.51 2-5-2-7-2" />
         </svg>
       ),
@@ -130,7 +130,9 @@ export default function ContactSection() {
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-20 w-48 h-48 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10" />
+
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10" />
+
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-5" />
       </div>
 
@@ -150,7 +152,10 @@ export default function ContactSection() {
 
         <div className="grid lg:grid-cols-2 gap-12">
 
-          {/* Left: Contact info */}
+          {/* =====================================================
+              LEFT: CONTACT INFORMATION
+          ===================================================== */}
+
           <div className="space-y-8">
 
             <div>
@@ -159,20 +164,59 @@ export default function ContactSection() {
               </h3>
 
               <div className="space-y-4">
+
                 {CONTACT_ITEMS.map((item) => (
                   <div
                     key={item.label}
-                    className="flex items-center space-x-4 group"
+                    className="
+                      flex
+                      items-center
+                      space-x-4
+                      group
+                      cursor-pointer
+                      rounded-xl
+                      p-2
+                      -ml-2
+                      transition-all
+                      duration-300
+                      hover:bg-white/[0.03]
+                    "
                   >
+
+                    {/* ICON */}
+
                     <div
-                      className={`${item.bg} ${item.hoverBg} p-3 rounded-xl transition-colors`}
-                      style={{ color: item.color }}
+                      className={`
+                        ${item.bg}
+                        ${item.hoverBg}
+                        p-3
+                        rounded-xl
+                        transition-all
+                        duration-300
+                        group-hover:scale-110
+                        group-hover:-translate-y-1
+                        group-hover:shadow-lg
+                      `}
+                      style={{
+                        color: item.color,
+                      }}
                     >
                       {item.icon}
                     </div>
 
+                    {/* TEXT */}
+
                     <div>
-                      <p className="text-gray-400 text-xs mb-0.5">
+                      <p
+                        className="
+                          text-gray-400
+                          text-xs
+                          mb-0.5
+                          transition-colors
+                          duration-300
+                          group-hover:text-gray-300
+                        "
+                      >
                         {item.label}
                       </p>
 
@@ -188,19 +232,48 @@ export default function ContactSection() {
                             ? 'noopener noreferrer'
                             : undefined
                         }
-                        className="text-white hover:text-indigo-400 transition-colors text-sm font-medium"
+                        className="
+                          text-white
+                          hover:text-indigo-400
+                          transition-all
+                          duration-300
+                          text-sm
+                          font-medium
+                          group-hover:translate-x-1
+                          inline-block
+                        "
                       >
                         {item.value}
                       </a>
                     </div>
+
                   </div>
                 ))}
+
               </div>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+            {/* Connect Box */}
+
+            <div
+              className="
+                bg-white/5
+                backdrop-blur-sm
+                rounded-2xl
+                p-6
+                border
+                border-white/10
+                transition-all
+                duration-300
+                hover:bg-white/[0.08]
+                hover:border-white/20
+                hover:-translate-y-1
+                hover:shadow-xl
+              "
+            >
               <h4 className="text-lg font-semibold mb-3 flex items-center space-x-2">
                 <span className="text-xl">👋</span>
+
                 <span>Let&apos;s connect!</span>
               </h4>
 
@@ -214,14 +287,32 @@ export default function ContactSection() {
 
           </div>
 
-          {/* Right: Contact form */}
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+          {/* =====================================================
+              RIGHT: CONTACT FORM
+          ===================================================== */}
+
+          <div
+            className="
+              bg-white/5
+              backdrop-blur-sm
+              rounded-2xl
+              p-8
+              border
+              border-white/10
+              transition-all
+              duration-300
+              hover:bg-white/[0.07]
+              hover:border-white/20
+              hover:shadow-xl
+            "
+          >
 
             <h3 className="text-2xl font-bold mb-6">
               Send a Message
             </h3>
 
             {submitted ? (
+
               <div className="flex flex-col items-center justify-center py-12 space-y-4">
 
                 <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center">
@@ -250,8 +341,15 @@ export default function ContactSection() {
                 </p>
 
               </div>
+
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-5"
+              >
+
+                {/* Name */}
 
                 <div>
                   <label
@@ -273,9 +371,27 @@ export default function ContactSection() {
                       })
                     }
                     placeholder="Your name"
-                    className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all text-sm"
+                    className="
+                      w-full
+                      bg-white/10
+                      border
+                      border-white/20
+                      rounded-xl
+                      px-4
+                      py-3
+                      text-white
+                      placeholder-gray-500
+                      focus:outline-none
+                      focus:border-indigo-400
+                      focus:ring-1
+                      focus:ring-indigo-400
+                      transition-all
+                      text-sm
+                    "
                   />
                 </div>
+
+                {/* Email */}
 
                 <div>
                   <label
@@ -297,9 +413,27 @@ export default function ContactSection() {
                       })
                     }
                     placeholder="your@email.com"
-                    className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all text-sm"
+                    className="
+                      w-full
+                      bg-white/10
+                      border
+                      border-white/20
+                      rounded-xl
+                      px-4
+                      py-3
+                      text-white
+                      placeholder-gray-500
+                      focus:outline-none
+                      focus:border-indigo-400
+                      focus:ring-1
+                      focus:ring-indigo-400
+                      transition-all
+                      text-sm
+                    "
                   />
                 </div>
+
+                {/* Message */}
 
                 <div>
                   <label
@@ -321,13 +455,50 @@ export default function ContactSection() {
                       })
                     }
                     placeholder="Tell me about your project or opportunity..."
-                    className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all resize-none text-sm"
+                    className="
+                      w-full
+                      bg-white/10
+                      border
+                      border-white/20
+                      rounded-xl
+                      px-4
+                      py-3
+                      text-white
+                      placeholder-gray-500
+                      focus:outline-none
+                      focus:border-indigo-400
+                      focus:ring-1
+                      focus:ring-indigo-400
+                      transition-all
+                      resize-none
+                      text-sm
+                    "
                   />
                 </div>
 
+                {/* Send Button */}
+
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3.5 rounded-xl font-semibold hover:shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="
+                    w-full
+                    bg-gradient-to-r
+                    from-indigo-500
+                    to-purple-500
+                    text-white
+                    py-3.5
+                    rounded-xl
+                    font-semibold
+                    hover:shadow-lg
+                    hover:shadow-indigo-500/30
+                    hover:-translate-y-0.5
+                    transition-all
+                    duration-300
+                    flex
+                    items-center
+                    justify-center
+                    space-x-2
+                  "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -351,6 +522,7 @@ export default function ContactSection() {
             )}
 
           </div>
+
         </div>
       </div>
     </section>
