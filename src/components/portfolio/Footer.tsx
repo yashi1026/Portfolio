@@ -83,7 +83,7 @@ export default function Footer() {
 
               {/* LinkedIn */}
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/yashi-singh-aba6a4291/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -185,7 +185,7 @@ export default function Footer() {
             </h4>
 
             <div className="space-y-3 text-gray-400 text-sm">
-              <p>📧 yashisingh@email.com</p>
+              <p>📧 yashisinghjadaun123@gmail.com</p>
               <p>🎓 BBDNIIT — B.Tech CSE, 2026</p>
               <p>📍 Lucknow, Uttar Pradesh, India</p>
               <p>💼 Open to opportunities</p>
