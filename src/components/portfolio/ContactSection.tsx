@@ -43,7 +43,7 @@ export default function ContactSection() {
         </svg>
       ),
       label: 'Email',
-      value: 'yashisingh@email.com',
+      value: 'yashisinghjadaun123@email.com',
       href: 'mailto:yashisinghjadaun123@gmail.com',
       color: '#6366f1',
       bg: 'bg-indigo-500/20',
