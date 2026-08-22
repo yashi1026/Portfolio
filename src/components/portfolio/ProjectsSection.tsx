@@ -98,7 +98,7 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="py-24 bg-gradient-to-br from-white via-purple-50 to-pink-50 relative overflow-hidden"
+      className="pt-16 pb-24 bg-gradient-to-br from-white via-purple-50 to-pink-50 relative overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -112,12 +112,12 @@ export default function ProjectsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Section Header */}
-        <div className="section-header">
+        <div className="section-header mb-6">
           <h2 className="section-title text-gray-900">
             Featured Projects
           </h2>
 
-          <div className="section-divider" />
+          {/* Removed section divider */}
 
           <p className="section-subtitle text-gray-600">
             A showcase of my machine learning and software development work
@@ -125,7 +125,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Project Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {PROJECTS.map((project) => (
             <div
               key={project.id}
