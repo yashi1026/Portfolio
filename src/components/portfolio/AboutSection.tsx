@@ -159,8 +159,6 @@ export default function AboutSection() {
             About Me
           </h2>
 
-          {/* Section divider removed */}
-
           <p className="section-subtitle text-gray-600">
             Passionate about building practical solutions through
             code and machine learning
@@ -174,7 +172,7 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* =================================================
-              LEFT - AVATAR
+              LEFT - PHOTO
           ================================================== */}
 
           <div
@@ -193,7 +191,7 @@ export default function AboutSection() {
           >
             <div className="relative">
 
-              {/* Avatar circle */}
+              {/* Photo circle */}
 
               <div
                 className="
@@ -213,60 +211,58 @@ export default function AboutSection() {
                   overflow-hidden
                 "
               >
-                <div
+                <img
+                  src="/profile.jpg"
+                  alt="Yashi Singh"
                   className="
                     w-full
                     h-full
-                    bg-gradient-to-br
-                    from-indigo-500/20
-                    to-purple-500/20
-                    flex
-                    items-center
-                    justify-center
+                    object-cover
+                    object-center
                   "
-                >
-                  <div className="text-center">
-
-                    <div
-                      className="
-                        w-24
-                        h-24
-                        bg-gradient-to-br
-                        from-indigo-500
-                        to-purple-600
-                        rounded-full
-                        flex
-                        items-center
-                        justify-center
-                        mx-auto
-                        mb-3
-                        shadow-lg
-                      "
-                    >
-                      <span className="text-white text-3xl font-bold">
-                        YS
-                      </span>
-                    </div>
-
-                    <p className="text-indigo-700 font-semibold text-sm">
-                      Yashi Singh
-                    </p>
-
-                    <p className="text-indigo-500 text-xs">
-                      CSE Graduate
-                    </p>
-
-                  </div>
-                </div>
+                />
               </div>
 
               {/* Decorative dots */}
 
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-indigo-500 rounded-full opacity-20" />
+              <div
+                className="
+                  absolute
+                  -top-4
+                  -right-4
+                  w-8
+                  h-8
+                  bg-indigo-500
+                  rounded-full
+                  opacity-20
+                "
+              />
 
-              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-purple-500 rounded-full opacity-20" />
+              <div
+                className="
+                  absolute
+                  -bottom-4
+                  -left-4
+                  w-12
+                  h-12
+                  bg-purple-500
+                  rounded-full
+                  opacity-20
+                "
+              />
 
-              <div className="absolute top-1/2 -right-8 w-5 h-5 bg-pink-500 rounded-full opacity-30" />
+              <div
+                className="
+                  absolute
+                  top-1/2
+                  -right-8
+                  w-5
+                  h-5
+                  bg-pink-500
+                  rounded-full
+                  opacity-30
+                "
+              />
 
             </div>
           </div>
@@ -421,7 +417,7 @@ export default function AboutSection() {
                 {item.sub}
               </div>
 
-              {/* Bottom hover line inside card */}
+              {/* Bottom hover line */}
 
               <div
                 className="
