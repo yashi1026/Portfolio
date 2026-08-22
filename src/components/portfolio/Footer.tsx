@@ -127,7 +127,7 @@ export default function Footer() {
 
               {/* Email */}
               <a
-                href="mailto:yashisingh@email.com"
+                href="mailto:yashisinghjadaun123@gmail.com"
                 aria-label="Email"
                 className="text-gray-400 hover:text-pink-400 transition-all duration-300 hover:scale-110"
               >
