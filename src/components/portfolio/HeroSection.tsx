@@ -292,49 +292,6 @@ export default function HeroSection() {
               sm:flex-row
             "
           >
-
-            {/* VIEW PROJECTS */}
-
-            <button
-              onClick={() => scrollToSection('#projects')}
-              className="
-                group
-                min-w-[195px]
-                rounded-xl
-                bg-gradient-to-r
-                from-[#4f46e5]
-                via-[#6366f1]
-                to-[#9333ea]
-                px-8
-                py-4
-                text-base
-                font-semibold
-                text-white
-                shadow-lg
-                shadow-indigo-500/20
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:shadow-xl
-                hover:shadow-indigo-500/30
-                active:scale-95
-              "
-            >
-              View Projects
-
-              <span
-                className="
-                  ml-2
-                  inline-block
-                  transition-transform
-                  duration-300
-                  group-hover:translate-x-1
-                "
-              >
-                →
-              </span>
-            </button>
-
             {/* GET IN TOUCH */}
 
             <button
@@ -391,7 +348,6 @@ export default function HeroSection() {
             >
               Resume
             </a>
-
           </div>
 
           {/* =================================================
