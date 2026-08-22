@@ -40,7 +40,7 @@ export default function EducationSection() {
   return (
     <section
       id="education"
-      className="py-24 bg-gradient-to-br from-white via-indigo-50 to-purple-50 relative overflow-hidden"
+      className="py-16 bg-gradient-to-br from-white via-indigo-50 to-purple-50 relative overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -51,7 +51,7 @@ export default function EducationSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Header */}
-        <div className="section-header">
+        <div className="section-header mb-8">
           <h2 className="section-title text-gray-900">
             Education
           </h2>
