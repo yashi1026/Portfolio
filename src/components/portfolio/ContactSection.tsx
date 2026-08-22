@@ -251,7 +251,7 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* Connect Box - NO HOVER */}
+            {/* Let's Connect - NO HOVER */}
 
             <div
               className="
@@ -339,7 +339,7 @@ export default function ContactSection() {
                 className="space-y-5"
               >
 
-                {/* Name */}
+                {/* NAME */}
 
                 <div>
                   <label
@@ -377,6 +377,8 @@ export default function ContactSection() {
                       focus:ring-indigo-400
                       hover:bg-white/[0.15]
                       hover:border-white/30
+                      hover:-translate-y-0.5
+                      hover:shadow-lg
                       transition-all
                       duration-300
                       text-sm
@@ -384,7 +386,7 @@ export default function ContactSection() {
                   />
                 </div>
 
-                {/* Email */}
+                {/* EMAIL */}
 
                 <div>
                   <label
@@ -422,6 +424,8 @@ export default function ContactSection() {
                       focus:ring-indigo-400
                       hover:bg-white/[0.15]
                       hover:border-white/30
+                      hover:-translate-y-0.5
+                      hover:shadow-lg
                       transition-all
                       duration-300
                       text-sm
@@ -429,7 +433,7 @@ export default function ContactSection() {
                   />
                 </div>
 
-                {/* Message */}
+                {/* MESSAGE */}
 
                 <div>
                   <label
@@ -467,6 +471,8 @@ export default function ContactSection() {
                       focus:ring-indigo-400
                       hover:bg-white/[0.15]
                       hover:border-white/30
+                      hover:-translate-y-0.5
+                      hover:shadow-lg
                       transition-all
                       duration-300
                       resize-none
@@ -475,7 +481,7 @@ export default function ContactSection() {
                   />
                 </div>
 
-                {/* Send Button */}
+                {/* SEND BUTTON */}
 
                 <button
                   type="submit"
