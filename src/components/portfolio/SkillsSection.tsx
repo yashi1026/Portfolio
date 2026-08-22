@@ -196,29 +196,8 @@ export default function SkillsSection() {
         {/* SECTION HEADER */}
         <div className="section-header">
 
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2 mb-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="text-yellow-400"
-            >
-              <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
-            </svg>
-
-            <span className="text-white font-medium text-sm">
-              Skills & Expertise
-            </span>
-          </div>
-
           <h2 className="section-title text-white">
-            Technical Toolkit
+            Technical Skills
           </h2>
 
           <div className="section-divider" />
@@ -226,10 +205,12 @@ export default function SkillsSection() {
           <p className="section-subtitle text-gray-400">
             A comprehensive set of technologies and tools I work with
           </p>
+
         </div>
 
         {/* SKILL CARDS */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
+
           {SKILL_GROUPS.map((group) => (
             <div
               key={group.title}
@@ -243,8 +224,10 @@ export default function SkillsSection() {
                 border-white/10
               "
             >
+
               {/* STATIC ICON */}
               <div className="flex justify-center mb-4">
+
                 <div
                   className={`
                     w-14
@@ -261,15 +244,17 @@ export default function SkillsSection() {
                 >
                   {group.icon}
                 </div>
+
               </div>
 
-              {/* STATIC TITLE */}
+              {/* TITLE */}
               <h3 className="text-lg font-bold text-white text-center mb-4">
                 {group.title}
               </h3>
 
-              {/* STATIC SKILL BADGES */}
+              {/* SKILLS */}
               <div className="flex flex-wrap gap-2 justify-center">
+
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
@@ -291,9 +276,12 @@ export default function SkillsSection() {
                     {skill}
                   </span>
                 ))}
+
               </div>
+
             </div>
           ))}
+
         </div>
 
       </div>
