@@ -1,21 +1,56 @@
 'use client';
 
+interface EducationItem {
+  institution: string;
+  degree: string;
+  period: string;
+  icon: string;
+  color: string;
+  gradient: string;
+}
+
+const EDUCATION: EducationItem[] = [
+  {
+    institution: 'Babu Banarasi Das Northern India Institute of Technology, Lucknow',
+    degree: 'B.Tech — Computer Science and Engineering',
+    period: 'September 2022 — June 2026',
+    icon: '🎓',
+    color: '#6366f1',
+    gradient: 'from-indigo-500 to-purple-600',
+  },
+  {
+    institution: 'Central Board of Secondary Education',
+    degree: 'Senior Secondary Education (Class XII)',
+    period: 'April 2020 — June 2021',
+    icon: '📚',
+    color: '#9333ea',
+    gradient: 'from-purple-500 to-pink-600',
+  },
+  {
+    institution: 'Indian Certificate of Secondary Education',
+    degree: 'Secondary Education (Class X)',
+    period: 'April 2018 — May 2019',
+    icon: '🏫',
+    color: '#ec4899',
+    gradient: 'from-pink-500 to-rose-600',
+  },
+];
+
 export default function EducationSection() {
   return (
     <section
       id="education"
-      className="py-24 bg-gradient-to-br from-white via-purple-50 to-pink-50 relative overflow-hidden"
+      className="py-24 bg-gradient-to-br from-white via-indigo-50 to-purple-50 relative overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-pink-200 rounded-full opacity-30" />
-
-        <div className="absolute bottom-10 right-10 w-48 h-48 bg-purple-200 rounded-full opacity-30" />
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-10 right-10 w-40 h-40 bg-indigo-200 rounded-full mix-blend-multiply filter blur-2xl opacity-40" />
+        <div className="absolute bottom-10 left-10 w-56 h-56 bg-purple-200 rounded-full mix-blend-multiply filter blur-2xl opacity-40" />
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        {/* SECTION HEADER */}
+        {/* Header */}
         <div className="section-header">
           <h2 className="section-title text-gray-900">
             Education
@@ -24,86 +59,109 @@ export default function EducationSection() {
           <div className="section-divider" />
 
           <p className="section-subtitle text-gray-600">
-            My academic journey and educational background
+            My academic journey and qualifications
           </p>
         </div>
 
-        {/* EDUCATION */}
-        <div className="relative mt-12">
+        {/* Timeline */}
+        <div className="relative">
 
-          {/* STATIC TIMELINE */}
-          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-purple-200" />
+          {/* Vertical line */}
+          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 opacity-30" />
 
-          <div className="space-y-10">
+          <div className="space-y-8">
 
-            {/* B.TECH */}
-            <div className="relative pl-12">
+            {EDUCATION.map((item) => (
+              <div
+                key={item.institution}
+                className="relative pl-16"
+              >
 
-              {/* STATIC DOT */}
-              <div className="absolute left-0 top-6 w-8 h-8 rounded-full bg-purple-100 border-4 border-white flex items-center justify-center">
-                <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
-              </div>
+                {/* Timeline dot */}
+                <div
+                  className="absolute left-3 w-6 h-6 rounded-full flex items-center justify-center shadow-lg"
+                  style={{
+                    background: `linear-gradient(135deg, ${item.color}, ${item.color}80)`,
+                    boxShadow: `0 0 0 4px ${item.color}20`,
+                    top: '1.5rem',
+                  }}
+                >
+                  <div className="w-2 h-2 bg-white rounded-full" />
+                </div>
 
-              {/* STATIC CARD */}
-              <div className="bg-white border border-purple-100 rounded-2xl p-6 shadow-lg">
+                {/* Card */}
+                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/50">
 
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
+                  <div className="flex items-start space-x-4">
 
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900">
-                      Bachelor of Technology
-                    </h3>
+                    {/* Icon */}
+                    <div
+                      className={`w-12 h-12 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center text-xl shadow-md flex-shrink-0`}
+                    >
+                      {item.icon}
+                    </div>
 
-                    <p className="text-purple-600 font-semibold text-sm mt-1">
-                      Computer Science & Engineering
-                    </p>
+                    <div className="flex-1 min-w-0">
+
+                      <h3 className="text-base font-bold text-gray-900 mb-1 leading-tight">
+                        {item.institution}
+                      </h3>
+
+                      <p
+                        className="font-semibold text-sm mb-2"
+                        style={{ color: item.color }}
+                      >
+                        {item.degree}
+                      </p>
+
+                      <div className="flex items-center space-x-2">
+
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="13"
+                          height="13"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="text-gray-400"
+                        >
+                          <rect
+                            width="18"
+                            height="18"
+                            x="3"
+                            y="4"
+                            rx="2"
+                          />
+                          <path d="M16 2v4" />
+                          <path d="M8 2v4" />
+                          <path d="M3 10h18" />
+                        </svg>
+
+                        <span className="text-gray-500 text-xs">
+                          {item.period}
+                        </span>
+
+                      </div>
+                    </div>
                   </div>
 
-                  <span className="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full border border-purple-200 whitespace-nowrap">
-                    2022 – 2026
-                  </span>
+                  {/* Static bottom border */}
+                  <div
+                    className="w-full h-0.5 mt-4 rounded-full"
+                    style={{
+                      background: `linear-gradient(to right, ${item.color}, transparent)`,
+                    }}
+                  />
 
                 </div>
-
-                <p className="text-gray-700 font-medium mb-3">
-                  Pranveer Singh Institute of Technology
-                </p>
-
-                <p className="text-gray-600 text-sm leading-relaxed mb-5">
-                  Pursuing a Bachelor of Technology in Computer Science &
-                  Engineering with a focus on programming, machine learning,
-                  data science, software development, and core computer
-                  science concepts.
-                </p>
-
-                <div className="grid sm:grid-cols-2 gap-2">
-
-                  {[
-                    'Data Structures & Algorithms',
-                    'Object-Oriented Programming',
-                    'Database Management Systems',
-                    'Operating Systems',
-                    'Computer Networks',
-                    'Machine Learning',
-                  ].map((subject) => (
-                    <div
-                      key={subject}
-                      className="flex items-center space-x-2 text-sm text-gray-600"
-                    >
-                      <div className="w-1.5 h-1.5 rounded-full bg-purple-500 flex-shrink-0" />
-
-                      <span>{subject}</span>
-                    </div>
-                  ))}
-
-                </div>
-
               </div>
-            </div>
+            ))}
 
           </div>
         </div>
-
       </div>
     </section>
   );
