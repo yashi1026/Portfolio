@@ -112,6 +112,7 @@ export default function ProjectsSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
         {/* Section Header */}
         <div className="section-header mb-6">
           <h2 className="section-title text-gray-900">
@@ -132,10 +133,12 @@ export default function ProjectsSection() {
               key={project.id}
               className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden border border-white/50"
             >
+
               {/* Project Image / Header */}
               <div
                 className={`relative h-44 bg-gradient-to-br ${project.gradient} overflow-hidden`}
               >
+
                 {/* Static background pattern */}
                 <div
                   className="absolute inset-0 opacity-10"
@@ -160,6 +163,7 @@ export default function ProjectsSection() {
 
               {/* Project Content */}
               <div className="p-6">
+
                 {/* Title */}
                 <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">
                   {project.title}
@@ -205,10 +209,23 @@ export default function ProjectsSection() {
 
                 {/* Buttons */}
                 <div className="flex space-x-4 pt-4 border-t border-gray-100">
+
                   {/* Live Demo */}
                   <a
                     href={project.liveUrl}
-                    className="flex items-center space-x-1.5 text-indigo-600 font-medium text-sm"
+                    className="
+                      flex
+                      items-center
+                      space-x-1.5
+                      text-indigo-600
+                      font-medium
+                      text-sm
+                      transition-all
+                      duration-300
+                      hover:text-indigo-800
+                      hover:-translate-y-0.5
+                      hover:scale-105
+                    "
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -232,7 +249,19 @@ export default function ProjectsSection() {
                   {/* GitHub */}
                   <a
                     href={project.githubUrl}
-                    className="flex items-center space-x-1.5 text-gray-600 font-medium text-sm"
+                    className="
+                      flex
+                      items-center
+                      space-x-1.5
+                      text-gray-600
+                      font-medium
+                      text-sm
+                      transition-all
+                      duration-300
+                      hover:text-gray-900
+                      hover:-translate-y-0.5
+                      hover:scale-105
+                    "
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -245,12 +274,13 @@ export default function ProjectsSection() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     >
-                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 6 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 6 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
                       <path d="M9 18c-4.51 2-5-2-7-2" />
                     </svg>
 
                     <span>GitHub</span>
                   </a>
+
                 </div>
               </div>
             </div>
