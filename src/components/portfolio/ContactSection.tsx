@@ -111,7 +111,7 @@ export default function ContactSection() {
         </svg>
       ),
       label: 'LeetCode',
-      value: 'leetcode.com/u/zoneofyashi',
+      value: 'leetcode.com/u/zoneofyashi/',
       href: 'https://leetcode.com/u/zoneofyashi/',
       color: '#f59e0b',
       bg: 'bg-amber-500/20',
@@ -156,7 +156,6 @@ export default function ContactSection() {
               </h3>
 
               <div className="space-y-4">
-
                 {CONTACT_ITEMS.map((item) => (
                   <div
                     key={item.label}
@@ -193,7 +192,6 @@ export default function ContactSection() {
                     </div>
                   </div>
                 ))}
-
               </div>
             </div>
 
