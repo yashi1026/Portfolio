@@ -69,8 +69,8 @@ export default function ContactSection() {
         </svg>
       ),
       label: 'LinkedIn',
-      value: 'linkedin.com/in/yashisingh',
-      href: 'https://linkedin.com',
+      value: 'linkedin.com/in/yashi-singh',
+      href: 'https://www.linkedin.com/in/yashi-singh-aba6a4291/',
       color: '#3b82f6',
       bg: 'bg-blue-500/20',
       hoverBg: 'hover:bg-blue-500/30',
