@@ -212,7 +212,7 @@ export default function AboutSection() {
                 "
               >
                 <img
-                  src="/profile.jpg"
+                  src="/profile.jpeg"
                   alt="Yashi Singh"
                   className="
                     w-full
