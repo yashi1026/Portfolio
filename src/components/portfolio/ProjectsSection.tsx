@@ -38,6 +38,7 @@ const PROJECTS: Project[] = [
     accentColor: '#6366f1',
     icon: '🏥',
   },
+
   {
     id: 2,
     title: 'Resume vs Job Matcher',
@@ -69,28 +70,29 @@ const PROJECTS: Project[] = [
     accentColor: '#06b6d4',
     icon: '📄',
   },
+
   {
     id: 3,
-    title: 'Loan Prediction System',
-    category: 'Machine Learning',
+    title: 'ShopOnline – E-Commerce Platform',
+    category: 'Java / Software Development',
     description:
-      'Developed a machine learning system to predict loan approval status using applicant financial and demographic data.',
-    tech: ['Python', 'Pandas', 'Scikit-learn', 'Matplotlib'],
+      'Developed a Java-based e-commerce application with separate customer and administrator functionalities using Object-Oriented Programming concepts.',
+    tech: ['Java', 'Java Swing', 'OOP', 'File Handling'],
     features: [
-      '95% prediction accuracy',
-      'Feature selection',
-      'Hyperparameter tuning',
-      'Model evaluation',
-      'Accuracy & Precision',
-      'Recall & F1 Score',
-      'Confusion Matrix',
-      'End-to-end ML pipeline',
+      'Customer registration & login',
+      'Admin registration & login',
+      'Password management',
+      'Product browsing',
+      'Shopping cart',
+      'Order placement',
+      'Inventory management',
+      'Admin product management',
     ],
     githubUrl: '#',
     liveUrl: '#',
     gradient: 'from-emerald-500 via-teal-500 to-cyan-500',
     accentColor: '#10b981',
-    icon: '💰',
+    icon: '🛒',
   },
 ];
 
@@ -110,7 +112,6 @@ export default function ProjectsSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
         {/* Section Header */}
         <div className="section-header mb-6">
           <h2 className="section-title text-gray-900">
@@ -146,9 +147,7 @@ export default function ProjectsSection() {
 
                 {/* Project Icon */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-6xl">
-                    {project.icon}
-                  </span>
+                  <span className="text-6xl">{project.icon}</span>
                 </div>
 
                 {/* Category */}
@@ -161,7 +160,6 @@ export default function ProjectsSection() {
 
               {/* Project Content */}
               <div className="p-6">
-
                 {/* Title */}
                 <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">
                   {project.title}
@@ -207,7 +205,6 @@ export default function ProjectsSection() {
 
                 {/* Buttons */}
                 <div className="flex space-x-4 pt-4 border-t border-gray-100">
-
                   {/* Live Demo */}
                   <a
                     href={project.liveUrl}
@@ -254,13 +251,11 @@ export default function ProjectsSection() {
 
                     <span>GitHub</span>
                   </a>
-
                 </div>
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
