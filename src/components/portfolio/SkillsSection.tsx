@@ -200,8 +200,6 @@ export default function SkillsSection() {
             Technical Skills
           </h2>
 
-          {/* Horizontal divider removed */}
-
           <p className="section-subtitle text-gray-400">
             A comprehensive set of technologies and tools I work with
           </p>
@@ -222,6 +220,13 @@ export default function SkillsSection() {
                 p-5
                 border
                 border-white/10
+                transition-all
+                duration-300
+                ease-out
+                hover:-translate-y-1
+                hover:bg-white/[0.08]
+                hover:border-white/20
+                hover:shadow-xl
               "
             >
 
