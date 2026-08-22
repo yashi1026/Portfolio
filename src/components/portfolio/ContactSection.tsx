@@ -180,6 +180,7 @@ export default function ContactSection() {
                       hover:bg-white/[0.03]
                     "
                   >
+
                     {/* ICON */}
 
                     <div
@@ -243,6 +244,7 @@ export default function ContactSection() {
                         {item.value}
                       </a>
                     </div>
+
                   </div>
                 ))}
 
@@ -263,7 +265,6 @@ export default function ContactSection() {
             >
               <h4 className="text-lg font-semibold mb-3 flex items-center space-x-2">
                 <span className="text-xl">👋</span>
-
                 <span>Let&apos;s connect!</span>
               </h4>
 
@@ -292,6 +293,7 @@ export default function ContactSection() {
               hover:bg-white/[0.07]
               hover:border-white/20
               hover:shadow-xl
+              hover:-translate-y-1
             "
           >
 
@@ -369,15 +371,12 @@ export default function ContactSection() {
                       py-3
                       text-white
                       placeholder-gray-500
-                      hover:bg-white/[0.16]
-                      hover:border-indigo-400/60
-                      hover:shadow-lg
-                      hover:shadow-indigo-500/10
-                      hover:-translate-y-0.5
                       focus:outline-none
                       focus:border-indigo-400
                       focus:ring-1
                       focus:ring-indigo-400
+                      hover:bg-white/[0.15]
+                      hover:border-white/30
                       transition-all
                       duration-300
                       text-sm
@@ -417,15 +416,12 @@ export default function ContactSection() {
                       py-3
                       text-white
                       placeholder-gray-500
-                      hover:bg-white/[0.16]
-                      hover:border-indigo-400/60
-                      hover:shadow-lg
-                      hover:shadow-indigo-500/10
-                      hover:-translate-y-0.5
                       focus:outline-none
                       focus:border-indigo-400
                       focus:ring-1
                       focus:ring-indigo-400
+                      hover:bg-white/[0.15]
+                      hover:border-white/30
                       transition-all
                       duration-300
                       text-sm
@@ -465,15 +461,12 @@ export default function ContactSection() {
                       py-3
                       text-white
                       placeholder-gray-500
-                      hover:bg-white/[0.16]
-                      hover:border-indigo-400/60
-                      hover:shadow-lg
-                      hover:shadow-indigo-500/10
-                      hover:-translate-y-0.5
                       focus:outline-none
                       focus:border-indigo-400
                       focus:ring-1
                       focus:ring-indigo-400
+                      hover:bg-white/[0.15]
+                      hover:border-white/30
                       transition-all
                       duration-300
                       resize-none
