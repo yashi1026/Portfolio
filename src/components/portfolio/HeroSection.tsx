@@ -133,7 +133,7 @@ export default function HeroSection() {
           justify-center
           px-5
           pb-20
-          pt-28
+          pt-24
           text-center
           transition-all
           duration-1000
@@ -145,57 +145,6 @@ export default function HeroSection() {
         `}
       >
         <div className="mx-auto flex w-full max-w-5xl flex-col items-center">
-
-          {/* =================================================
-              STATUS
-          ================================================== */}
-
-          <div
-            className="
-              mb-7
-              inline-flex
-              items-center
-              gap-2.5
-              rounded-full
-              border
-              border-emerald-400/20
-              bg-emerald-400/[0.06]
-              px-4
-              py-2
-              text-sm
-              font-medium
-              text-emerald-400
-              backdrop-blur-sm
-            "
-          >
-            <span className="relative flex h-2 w-2">
-              <span
-                className="
-                  absolute
-                  inline-flex
-                  h-full
-                  w-full
-                  animate-ping
-                  rounded-full
-                  bg-emerald-400
-                  opacity-75
-                "
-              />
-
-              <span
-                className="
-                  relative
-                  inline-flex
-                  h-2
-                  w-2
-                  rounded-full
-                  bg-emerald-400
-                "
-              />
-            </span>
-
-            Available for opportunities
-          </div>
 
           {/* =================================================
               HELLO
@@ -261,13 +210,6 @@ export default function HeroSection() {
             "
           >
             Computer Science Engineer
-            <span className="mx-2 hidden text-gray-600 sm:inline">
-              &
-            </span>
-
-            <span className="block text-[#6366f1] sm:inline">
-              ML Developer
-            </span>
           </h2>
 
           {/* =================================================
