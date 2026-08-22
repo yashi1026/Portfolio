@@ -100,7 +100,7 @@ export default function ProjectsSection() {
       id="projects"
       className="py-24 bg-gradient-to-br from-white via-purple-50 to-pink-50 relative overflow-hidden"
     >
-      {/* Background blobs */}
+      {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-10 left-10 w-32 h-32 bg-pink-200 rounded-full mix-blend-multiply filter blur-2xl opacity-40" />
 
@@ -111,7 +111,7 @@ export default function ProjectsSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        {/* Header */}
+        {/* Section Header */}
         <div className="section-header">
           <h2 className="section-title text-gray-900">
             Featured Projects
@@ -124,48 +124,18 @@ export default function ProjectsSection() {
           </p>
         </div>
 
-        {/* Static filter display */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="text-gray-400 self-center mr-1"
-          >
-            <path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z" />
-          </svg>
-
-          <div className="px-5 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg shadow-indigo-500/30">
-            All
-          </div>
-
-          <div className="px-5 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700">
-            Machine Learning
-          </div>
-
-          <div className="px-5 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700">
-            NLP / ML
-          </div>
-        </div>
-
         {/* Project Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {PROJECTS.map((project) => (
             <div
               key={project.id}
               className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden border border-white/50"
             >
-              {/* Card Header */}
+              {/* Project Image / Header */}
               <div
                 className={`relative h-44 bg-gradient-to-br ${project.gradient} overflow-hidden`}
               >
-                {/* Static pattern */}
+                {/* Static background pattern */}
                 <div
                   className="absolute inset-0 opacity-10"
                   style={{
@@ -174,9 +144,11 @@ export default function ProjectsSection() {
                   }}
                 />
 
-                {/* Icon */}
+                {/* Project Icon */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-6xl">{project.icon}</span>
+                  <span className="text-6xl">
+                    {project.icon}
+                  </span>
                 </div>
 
                 {/* Category */}
@@ -187,13 +159,15 @@ export default function ProjectsSection() {
                 </div>
               </div>
 
-              {/* Card Body */}
+              {/* Project Content */}
               <div className="p-6">
 
+                {/* Title */}
                 <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">
                   {project.title}
                 </h3>
 
+                {/* Description */}
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-3">
                   {project.description}
                 </p>
@@ -219,7 +193,7 @@ export default function ProjectsSection() {
                   </div>
                 </div>
 
-                {/* Tech Stack */}
+                {/* Technologies */}
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   {project.tech.map((technology) => (
                     <span
@@ -231,9 +205,10 @@ export default function ProjectsSection() {
                   ))}
                 </div>
 
-                {/* Action Buttons */}
+                {/* Buttons */}
                 <div className="flex space-x-4 pt-4 border-t border-gray-100">
 
+                  {/* Live Demo */}
                   <a
                     href={project.liveUrl}
                     className="flex items-center space-x-1.5 text-indigo-600 font-medium text-sm"
@@ -257,6 +232,7 @@ export default function ProjectsSection() {
                     <span>Live Demo</span>
                   </a>
 
+                  {/* GitHub */}
                   <a
                     href={project.githubUrl}
                     className="flex items-center space-x-1.5 text-gray-600 font-medium text-sm"
@@ -272,7 +248,7 @@ export default function ProjectsSection() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     >
-                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 6 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
                       <path d="M9 18c-4.51 2-5-2-7-2" />
                     </svg>
 
@@ -284,6 +260,7 @@ export default function ProjectsSection() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
