@@ -32,7 +32,8 @@ const PROJECTS: Project[] = [
       'Authentication',
       'Admin & User dashboards',
     ],
-    githubUrl: '#',
+    githubUrl:
+      'https://github.com/yashi1026/AI-Powered-Diagnosis-and-Disease-Prediction-System',
     liveUrl: '#',
     gradient: 'from-indigo-500 via-purple-500 to-pink-500',
     accentColor: '#6366f1',
@@ -64,7 +65,8 @@ const PROJECTS: Project[] = [
       'Interactive visualizations',
       'Match score representation',
     ],
-    githubUrl: '#',
+    githubUrl:
+      'https://github.com/yashi1026/Resume-job-Matcher',
     liveUrl: '#',
     gradient: 'from-cyan-500 via-blue-500 to-indigo-500',
     accentColor: '#06b6d4',
@@ -88,7 +90,8 @@ const PROJECTS: Project[] = [
       'Inventory management',
       'Admin product management',
     ],
-    githubUrl: '#',
+    githubUrl:
+      'https://github.com/yashi1026/ShopOnline--Java-E-Commerce-Management-System',
     liveUrl: '#',
     gradient: 'from-emerald-500 via-teal-500 to-cyan-500',
     accentColor: '#10b981',
@@ -137,18 +140,14 @@ export default function ProjectsSection() {
                 overflow-hidden
                 border
                 border-white/50
-                transition-all
-                duration-300
-                ease-out
-                hover:-translate-y-2
-                hover:shadow-xl
-                hover:border-white
               "
             >
+
               {/* Project Image / Header */}
               <div
                 className={`relative h-44 bg-gradient-to-br ${project.gradient} overflow-hidden`}
               >
+
                 {/* Static background pattern */}
                 <div
                   className="absolute inset-0 opacity-10"
@@ -160,9 +159,7 @@ export default function ProjectsSection() {
 
                 {/* Project Icon */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-6xl">
-                    {project.icon}
-                  </span>
+                  <span className="text-6xl">{project.icon}</span>
                 </div>
 
                 {/* Category */}
@@ -212,7 +209,19 @@ export default function ProjectsSection() {
                   {project.tech.map((technology) => (
                     <span
                       key={technology}
-                      className="px-2.5 py-1 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700 text-xs rounded-full border border-indigo-100 font-medium"
+                      className="
+                        px-2.5
+                        py-1
+                        bg-gradient-to-r
+                        from-indigo-50
+                        to-purple-50
+                        text-indigo-700
+                        text-xs
+                        rounded-full
+                        border
+                        border-indigo-100
+                        font-medium
+                      "
                     >
                       {technology}
                     </span>
@@ -261,6 +270,8 @@ export default function ProjectsSection() {
                   {/* GitHub */}
                   <a
                     href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="
                       flex
                       items-center
@@ -286,7 +297,7 @@ export default function ProjectsSection() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     >
-                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5 0-0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 6 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5 0 0 1 0 3 1.5-2.64-.5-5.36-.5-8 0C6 2 6 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
                       <path d="M9 18c-4.51 2-5-2-7-2" />
                     </svg>
 
