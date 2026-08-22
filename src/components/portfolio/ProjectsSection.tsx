@@ -119,8 +119,6 @@ export default function ProjectsSection() {
             Featured Projects
           </h2>
 
-          {/* Removed section divider */}
-
           <p className="section-subtitle text-gray-600">
             A showcase of my machine learning and software development work
           </p>
@@ -131,14 +129,26 @@ export default function ProjectsSection() {
           {PROJECTS.map((project) => (
             <div
               key={project.id}
-              className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden border border-white/50"
+              className="
+                bg-white/90
+                backdrop-blur-sm
+                rounded-2xl
+                shadow-lg
+                overflow-hidden
+                border
+                border-white/50
+                transition-all
+                duration-300
+                ease-out
+                hover:-translate-y-2
+                hover:shadow-xl
+                hover:border-white
+              "
             >
-
               {/* Project Image / Header */}
               <div
                 className={`relative h-44 bg-gradient-to-br ${project.gradient} overflow-hidden`}
               >
-
                 {/* Static background pattern */}
                 <div
                   className="absolute inset-0 opacity-10"
@@ -150,7 +160,9 @@ export default function ProjectsSection() {
 
                 {/* Project Icon */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-6xl">{project.icon}</span>
+                  <span className="text-6xl">
+                    {project.icon}
+                  </span>
                 </div>
 
                 {/* Category */}
@@ -274,7 +286,7 @@ export default function ProjectsSection() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     >
-                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 6 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5 0-0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 6 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
                       <path d="M9 18c-4.51 2-5-2-7-2" />
                     </svg>
 
