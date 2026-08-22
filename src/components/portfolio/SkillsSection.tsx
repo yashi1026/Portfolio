@@ -180,7 +180,7 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="py-16 bg-gradient-to-br from-slate-900 via-purple-900/50 to-slate-900 relative overflow-hidden"
+      className="pt-6 pb-8 bg-gradient-to-br from-slate-900 via-purple-900/50 to-slate-900 relative overflow-hidden"
     >
       {/* STATIC BACKGROUND */}
       <div className="absolute inset-0 pointer-events-none">
@@ -194,13 +194,13 @@ export default function SkillsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* SECTION HEADER */}
-        <div className="section-header">
+        <div className="section-header mb-3">
 
           <h2 className="section-title text-white">
             Technical Skills
           </h2>
 
-          <div className="section-divider" />
+          {/* Horizontal divider removed */}
 
           <p className="section-subtitle text-gray-400">
             A comprehensive set of technologies and tools I work with
@@ -209,7 +209,7 @@ export default function SkillsSection() {
         </div>
 
         {/* SKILL CARDS */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4">
 
           {SKILL_GROUPS.map((group) => (
             <div
