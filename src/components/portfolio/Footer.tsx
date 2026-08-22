@@ -194,7 +194,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-10 pt-8">
           <div className="flex justify-center items-center">
             <p className="text-gray-400 text-sm">
-              &copy; 2026 Yashi Singh.
+              &copy; Yashi Singh
             </p>
           </div>
         </div>
