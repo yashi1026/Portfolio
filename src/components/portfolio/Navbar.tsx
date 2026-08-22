@@ -133,7 +133,7 @@ export default function Navbar() {
               </button>
             ))}
             <a
-              href="/public/Yashi_Resume.pdf"
+              href="/Yashi_Resume.pdf"
               download
               className="flex items-center justify-center space-x-2 mt-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-3 rounded-full text-sm font-semibold"
             >
