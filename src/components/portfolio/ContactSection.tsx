@@ -149,7 +149,6 @@ export default function ContactSection() {
 
           {/* Left: Contact info */}
           <div className="space-y-8">
-
             <div>
               <h3 className="text-2xl font-bold mb-6">
                 Get In Touch
@@ -159,10 +158,10 @@ export default function ContactSection() {
                 {CONTACT_ITEMS.map((item) => (
                   <div
                     key={item.label}
-                    className="flex items-center space-x-4"
+                    className="flex items-center space-x-4 group"
                   >
                     <div
-                      className={`${item.bg} ${item.hoverBg} p-3 rounded-xl`}
+                      className={`${item.bg} ${item.hoverBg} p-3 rounded-xl transition-colors`}
                       style={{ color: item.color }}
                     >
                       {item.icon}
@@ -185,7 +184,7 @@ export default function ContactSection() {
                             ? 'noopener noreferrer'
                             : undefined
                         }
-                        className="text-white text-sm font-medium"
+                        className="text-white hover:text-indigo-400 transition-colors text-sm font-medium"
                       >
                         {item.value}
                       </a>
@@ -195,7 +194,7 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <h4 className="text-lg font-semibold mb-3 flex items-center space-x-2">
                 <span className="text-xl">👋</span>
                 <span>Let&apos;s connect!</span>
@@ -208,11 +207,10 @@ export default function ContactSection() {
                 out!
               </p>
             </div>
-
           </div>
 
           {/* Right: Contact form */}
-          <div className="bg-white/5 rounded-2xl p-8 border border-white/10">
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
 
             <h3 className="text-2xl font-bold mb-6">
               Send a Message
@@ -245,7 +243,6 @@ export default function ContactSection() {
                 <p className="text-gray-400 text-sm text-center">
                   Thank you for reaching out. I&apos;ll get back to you soon.
                 </p>
-
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -270,7 +267,7 @@ export default function ContactSection() {
                       })
                     }
                     placeholder="Your name"
-                    className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 text-sm"
+                    className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all text-sm"
                   />
                 </div>
 
@@ -294,7 +291,7 @@ export default function ContactSection() {
                       })
                     }
                     placeholder="your@email.com"
-                    className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 text-sm"
+                    className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all text-sm"
                   />
                 </div>
 
@@ -318,13 +315,13 @@ export default function ContactSection() {
                       })
                     }
                     placeholder="Tell me about your project or opportunity..."
-                    className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 resize-none text-sm"
+                    className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all resize-none text-sm"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3.5 rounded-xl font-semibold flex items-center justify-center space-x-2"
+                  className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3.5 rounded-xl font-semibold hover:shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center space-x-2"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -346,7 +343,6 @@ export default function ContactSection() {
 
               </form>
             )}
-
           </div>
         </div>
       </div>
