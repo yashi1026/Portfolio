@@ -92,7 +92,7 @@ const SKILL_GROUPS: SkillGroup[] = [
   },
 
   {
-    title: 'Tools',
+    title: 'Tools & Deployment',
     color: '#10b981',
     gradient: 'from-emerald-500 to-teal-600',
     icon: (
@@ -122,9 +122,33 @@ const SKILL_GROUPS: SkillGroup[] = [
   },
 
   {
+    title: 'Database',
+    color: '#f97316',
+    gradient: 'from-orange-500 to-red-600',
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="30"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <ellipse cx="12" cy="5" rx="9" ry="3" />
+        <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5" />
+        <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3" />
+      </svg>
+    ),
+    skills: ['SQL', 'MySQL', 'Database Management'],
+  },
+
+  {
     title: 'Core CS',
-    color: '#f59e0b',
-    gradient: 'from-amber-500 to-orange-600',
+    color: '#eab308',
+    gradient: 'from-yellow-500 to-orange-600',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +167,7 @@ const SKILL_GROUPS: SkillGroup[] = [
       </svg>
     ),
     skills: [
-      'DSA',
+      'Data Structures & Algorithms',
       'OOP',
       'DBMS',
       'Operating Systems',
@@ -158,20 +182,27 @@ export default function SkillsSection() {
       id="skills"
       className="py-16 bg-gradient-to-br from-slate-900 via-purple-900/50 to-slate-900 relative overflow-hidden"
     >
-      {/* Static background */}
+      {/* STATIC BACKGROUND */}
       <div className="absolute inset-0 pointer-events-none">
+
         <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
 
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
 
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl" />
+
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        {/* Section Header */}
+        {/* =========================
+            SECTION HEADER
+        ========================== */}
+
         <div className="section-header">
+
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2 mb-4">
+
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -190,6 +221,7 @@ export default function SkillsSection() {
             <span className="text-white font-medium text-sm">
               Skills & Expertise
             </span>
+
           </div>
 
           <h2 className="section-title text-white">
@@ -201,121 +233,220 @@ export default function SkillsSection() {
           <p className="section-subtitle text-gray-400">
             A comprehensive set of technologies and tools I work with
           </p>
+
         </div>
 
-        {/* Skill Cards */}
+        {/* =========================
+            SKILL CARDS
+        ========================== */}
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
 
           {SKILL_GROUPS.map((group) => (
+
             <div
               key={group.title}
-              className="relative bg-white/5 backdrop-blur-lg rounded-2xl p-5 border border-white/10"
+              className="
+                relative
+                bg-white/5
+                backdrop-blur-lg
+                rounded-2xl
+                p-5
+                border
+                border-white/10
+              "
             >
 
-              {/* Static hover-free background */}
-              <div
-                className="absolute inset-0 rounded-2xl pointer-events-none"
-                style={{
-                  background: `linear-gradient(135deg, ${group.color}08, transparent, ${group.color}04)`,
-                }}
-              />
+              {/* STATIC ICON */}
 
-              {/* Icon */}
-              <div className="relative z-10 flex justify-center mb-4">
+              <div className="flex justify-center mb-4">
+
                 <div
-                  className={`w-14 h-14 bg-gradient-to-br ${group.gradient} rounded-2xl flex items-center justify-center text-white shadow-lg`}
+                  className={`
+                    w-14
+                    h-14
+                    bg-gradient-to-br
+                    ${group.gradient}
+                    rounded-2xl
+                    flex
+                    items-center
+                    justify-center
+                    text-white
+                    shadow-lg
+                  `}
                 >
                   {group.icon}
                 </div>
+
               </div>
 
-              {/* Title */}
-              <h3 className="text-lg font-bold text-white text-center mb-4 relative z-10">
+              {/* STATIC TITLE */}
+
+              <h3 className="text-lg font-bold text-white text-center mb-4">
                 {group.title}
               </h3>
 
-              {/* Skills */}
-              <div className="flex flex-wrap gap-2 justify-center relative z-10">
+              {/* STATIC SKILL BADGES */}
+
+              <div className="flex flex-wrap gap-2 justify-center">
+
                 {group.skills.map((skill) => (
+
                   <span
                     key={skill}
-                    className="skill-badge"
+                    className="
+                      inline-flex
+                      items-center
+                      justify-center
+                      px-3
+                      py-1.5
+                      rounded-full
+                      text-sm
+                      font-medium
+                      text-gray-300
+                      bg-white/5
+                      border
+                      border-white/10
+                    "
                   >
                     {skill}
                   </span>
+
                 ))}
+
               </div>
 
-              {/* Static corner dots */}
-              <div
-                className="absolute top-3 right-3 w-2 h-2 rounded-full opacity-60"
-                style={{ background: group.color }}
-              />
-
-              <div
-                className="absolute bottom-3 left-3 w-3 h-3 rounded-full opacity-30"
-                style={{ background: group.color }}
-              />
             </div>
+
           ))}
 
         </div>
 
-        {/* Stats */}
+        {/* =========================
+            STATIC STATS
+        ========================== */}
+
         <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-5">
 
-          {[
-            {
-              icon: '🚀',
-              value: '3+',
-              label: 'ML Projects',
-              color: '#6366f1',
-            },
-            {
-              icon: '⚡',
-              value: '5+',
-              label: 'Skill Categories',
-              color: '#9333ea',
-            },
-            {
-              icon: '🎯',
-              value: '95%',
-              label: 'Best Accuracy',
-              color: '#ec4899',
-            },
-            {
-              icon: '💡',
-              value: '2026',
-              label: 'Graduation',
-              color: '#06b6d4',
-            },
-          ].map((stat) => (
+          <div className="text-center">
+
             <div
-              key={stat.label}
-              className="text-center"
+              className="
+                inline-flex
+                items-center
+                justify-center
+                w-12
+                h-12
+                rounded-2xl
+                mb-2
+                text-xl
+                bg-indigo-500/20
+                border
+                border-indigo-400/20
+              "
             >
-              <div
-                className="inline-flex items-center justify-center w-12 h-12 rounded-2xl mb-2 shadow-lg text-xl"
-                style={{
-                  background: `linear-gradient(135deg, ${stat.color}40, ${stat.color}20)`,
-                  border: `1px solid ${stat.color}30`,
-                }}
-              >
-                {stat.icon}
-              </div>
-
-              <div
-                className="text-2xl font-bold text-white mb-1"
-                style={{ color: stat.color }}
-              >
-                {stat.value}
-              </div>
-
-              <div className="text-gray-400 text-sm">
-                {stat.label}
-              </div>
+              🚀
             </div>
-          ))}
+
+            <div className="text-2xl font-bold text-white mb-1">
+              3+
+            </div>
+
+            <div className="text-gray-400 text-sm">
+              ML Projects
+            </div>
+
+          </div>
+
+          <div className="text-center">
+
+            <div
+              className="
+                inline-flex
+                items-center
+                justify-center
+                w-12
+                h-12
+                rounded-2xl
+                mb-2
+                text-xl
+                bg-purple-500/20
+                border
+                border-purple-400/20
+              "
+            >
+              ⚡
+            </div>
+
+            <div className="text-2xl font-bold text-white mb-1">
+              5+
+            </div>
+
+            <div className="text-gray-400 text-sm">
+              Skill Categories
+            </div>
+
+          </div>
+
+          <div className="text-center">
+
+            <div
+              className="
+                inline-flex
+                items-center
+                justify-center
+                w-12
+                h-12
+                rounded-2xl
+                mb-2
+                text-xl
+                bg-pink-500/20
+                border
+                border-pink-400/20
+              "
+            >
+              🎯
+            </div>
+
+            <div className="text-2xl font-bold text-white mb-1">
+              95%
+            </div>
+
+            <div className="text-gray-400 text-sm">
+              Best Accuracy
+            </div>
+
+          </div>
+
+          <div className="text-center">
+
+            <div
+              className="
+                inline-flex
+                items-center
+                justify-center
+                w-12
+                h-12
+                rounded-2xl
+                mb-2
+                text-xl
+                bg-cyan-500/20
+                border
+                border-cyan-400/20
+              "
+            >
+              💡
+            </div>
+
+            <div className="text-2xl font-bold text-white mb-1">
+              2026
+            </div>
+
+            <div className="text-gray-400 text-sm">
+              Graduation
+            </div>
+
+          </div>
 
         </div>
 
