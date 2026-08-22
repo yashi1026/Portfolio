@@ -263,12 +263,6 @@ export default function ContactSection() {
                 p-6
                 border
                 border-white/10
-                transition-all
-                duration-300
-                hover:bg-white/[0.08]
-                hover:border-white/20
-                hover:-translate-y-1
-                hover:shadow-xl
               "
             >
               <h4 className="text-lg font-semibold mb-3 flex items-center space-x-2">
