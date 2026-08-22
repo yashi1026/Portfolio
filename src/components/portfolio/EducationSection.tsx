@@ -40,7 +40,7 @@ export default function EducationSection() {
   return (
     <section
       id="education"
-      className="py-16 bg-gradient-to-br from-white via-indigo-50 to-purple-50 relative overflow-hidden"
+      className="pt-12 pb-16 bg-gradient-to-br from-white via-indigo-50 to-purple-50 relative overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
