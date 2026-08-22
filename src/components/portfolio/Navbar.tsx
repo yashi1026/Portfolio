@@ -134,7 +134,8 @@ export default function Navbar() {
             ))}
             <a
   href="/Yashi_Resume.pdf"
-  download="Yashi_Resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
   className="ml-4 flex items-center space-x-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-indigo-500/30 hover:scale-105 transition-all duration-300"
 >
   <svg
