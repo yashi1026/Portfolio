@@ -73,7 +73,7 @@ const PROJECTS: Project[] = [
 
   {
     id: 3,
-    title: 'ShopOnline – E-Commerce Platform',
+    title: 'ShopOnline – E-Commerce Management System',
     category: 'Java / Software Development',
     description:
       'Developed a Java-based e-commerce application with separate customer and administrator functionalities using Object-Oriented Programming concepts.',
