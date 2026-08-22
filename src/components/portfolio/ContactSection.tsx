@@ -44,7 +44,7 @@ export default function ContactSection() {
       ),
       label: 'Email',
       value: 'yashisingh@email.com',
-      href: 'mailto:yashisingh@email.com',
+      href: 'mailto:yashisinghjadaun123@gmail.com',
       color: '#6366f1',
       bg: 'bg-indigo-500/20',
       hoverBg: 'hover:bg-indigo-500/30',
