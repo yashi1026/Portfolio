@@ -29,10 +29,9 @@ export default function HeroSection() {
           BACKGROUND
       ====================================================== */}
 
-      {/* Main background */}
       <div className="absolute inset-0 bg-[#0a0a14]" />
 
-      {/* Indigo glow - top left */}
+      {/* Indigo glow */}
       <div
         className="
           absolute
@@ -46,7 +45,7 @@ export default function HeroSection() {
         "
       />
 
-      {/* Purple glow - top right */}
+      {/* Purple glow */}
       <div
         className="
           absolute
@@ -60,7 +59,7 @@ export default function HeroSection() {
         "
       />
 
-      {/* Pink glow - bottom left */}
+      {/* Pink glow */}
       <div
         className="
           absolute
@@ -74,7 +73,7 @@ export default function HeroSection() {
         "
       />
 
-      {/* Cyan glow - bottom right */}
+      {/* Cyan glow */}
       <div
         className="
           absolute
@@ -230,7 +229,6 @@ export default function HeroSection() {
             "
           >
             {/* Location icon */}
-
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -294,7 +292,8 @@ export default function HeroSection() {
               sm:flex-row
             "
           >
-            {/* View Projects */}
+
+            {/* VIEW PROJECTS */}
 
             <button
               onClick={() => scrollToSection('#projects')}
@@ -336,7 +335,7 @@ export default function HeroSection() {
               </span>
             </button>
 
-            {/* Get In Touch */}
+            {/* GET IN TOUCH */}
 
             <button
               onClick={() => scrollToSection('#contact')}
@@ -362,6 +361,37 @@ export default function HeroSection() {
             >
               Get In Touch
             </button>
+
+            {/* RESUME */}
+
+            <a
+              href="/Yashi_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                min-w-[195px]
+                rounded-xl
+                border
+                border-[#6366f1]/40
+                bg-[#6366f1]/10
+                px-8
+                py-4
+                text-base
+                font-semibold
+                text-[#a5b4fc]
+                backdrop-blur-sm
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:border-[#6366f1]
+                hover:bg-[#6366f1]/20
+                hover:text-white
+                active:scale-95
+              "
+            >
+              Resume
+            </a>
+
           </div>
 
           {/* =================================================
@@ -401,7 +431,7 @@ export default function HeroSection() {
 
           <div className="mt-6 flex items-center gap-5">
 
-            {/* GitHub */}
+            {/* GITHUB */}
 
             <a
               href="https://github.com/yashi1026"
@@ -436,7 +466,7 @@ export default function HeroSection() {
               </svg>
             </a>
 
-            {/* LinkedIn */}
+            {/* LINKEDIN */}
 
             <a
               href="https://linkedin.com"
@@ -472,7 +502,7 @@ export default function HeroSection() {
               </svg>
             </a>
 
-            {/* Email */}
+            {/* EMAIL */}
 
             <a
               href="mailto:yashisingh@email.com"
@@ -506,6 +536,7 @@ export default function HeroSection() {
             </a>
 
           </div>
+
         </div>
       </div>
 
@@ -526,6 +557,7 @@ export default function HeroSection() {
           to-transparent
         "
       />
+
     </section>
   );
 }
